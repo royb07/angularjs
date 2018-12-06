@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+	
+<script>
+		angular.module("mainModule", [])
+		.controller("firstController", function($scope){
+			$scope.nombre="Roy";
+		/*
+		setTimeout(function(){
+			$scope.nombre="Angular JS";
+			$scope.$apply(function(){
+					$scope.nombre="Prueba"; 
+				});
+			}, 2000);
+		*/
+		/*
+			document.querySelector("#mi_boton").addEventListener("click", function(){
+				$scope.$apply(function(){
+					$scope.nombre="Exito";
+				});
+			});
+			*/
+		});
+
+
+</script>
+</head>
+
+<body ng-controller="firstController">
+	{{nombre}}
+
+	<button ng-click="nombre='testeando'"> Haz Clic</button>
+	
+</body>
+</html>

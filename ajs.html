@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="controller.js"></script>
+</head>
+
+<body>
+<!--
+	<div ng-controller="simpleController">
+	 
+	 <input type="text" ng-model="name">
+		{{name | uppercase}}
+	</div>
+	<br/>
+	<div>
+		<li ng-repeat="varios in customers | filter:name| orderBy:'city'">
+			{{varios.name}} - {{varios.city}}	
+		</li>
+		
+	</div>
+
+<input type="text" name="" ng-model="am">
+	<p ng-bind="am"> Parrafos</p>
+</input>
+
+<div>Nombre:
+	<input type="text" ng-model="bis">
+	{{bis}}
+	</input>
+
+	<input type="text" ng-init="azul='blue'">
+	<p style="background-color: {{azul}}" ng-model="azul">iuy</p>
+</div>
+
+<div ng-init="a=5;b=5">
+	{{a+b}}
+</div>
+
+<div ng-init="person={p:'rrr',b:'www'}">
+	{{person.p.b}}
+</div>
+
+<form ng-app="" name="myForm">
+	Email:
+	<input type="email" name="myAdress" ng-model="text">
+	<span ng-show="myForm.myAdress.$error.email" >Not a valid e-mail adress</span>
+	
+	<p>Ingrese un mail valido</p>
+
+	<h1>Status</h1>
+<p>Valid: {{myForm.myAddress.$valid}} (if true, the value meets all criteria).</p>
+<p>Dirty: {{myForm.myAddress.$dirty}} (if true, the value has been changed).</p>
+<p>Touched: {{myForm.myAddress.$touched}} (if true, the field has been in focus).</p>
+</form>
+-->
+<div ng-app="run" ng-controller="t1">
+	<div >
+		Primero:<input type="text" ng-model="p1"><br/>
+		Segundo:<input type="text" ng-model="s1"><br/>
+		
+		Full Name:{{fullName()}}
+	</div>
+	
+</div>
+<script>
+	 var app= angular.module('run', []);
+
+	 app.controller('t1', function($scope){
+	 	$scope.p1="Robert";
+	 	$scope.s1="Brennan";
+	 	$scope.fullName= function(){
+	 		return $scope.p1+" "+$scope.s1;
+	 	};
+
+	 });
+
+
+</script>
+
+
+</body>
+</html>
